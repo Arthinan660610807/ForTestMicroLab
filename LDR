@@ -1,0 +1,28 @@
+#define LDR  35
+#define LED 21
+
+int LDR_Value=0;
+int static_variable = 500;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED,OUTPUT);
+}
+
+void loop() {
+  LDR_Value = analogRead(LDR);
+
+  Serial.print("Variable_1:");
+  Serial.print(LDR_Value);
+  Serial.print(",");
+  Serial.print("Variable_2:");
+  Serial.println(static_variable);
+
+  if(LDR_Value >= 4000){
+    digitalWrite(LED, HIGH);
+  }else if(LDR_Value < 3800 ){
+    digitalWrite(LED,LOW);
+  }
+
+  delay(20);
+}
