@@ -1,8 +1,3 @@
-// Exmaple of using the MQTT library for ESP32 
-// Library by Joël Gähwiler
-// https://github.com/256dpi/arduino-mqtt
-// Modified by Arnan Sipitakiat
-
 
 #include <WiFi.h>
 #include <MQTT.h>
@@ -10,11 +5,11 @@
 #define BUTTON 32
 
 const char ssid[] = "@JumboPlusIoT";
-const char pass[] = "kornfaii27";
+const char pass[] = "54615461";
 
 const char mqtt_broker[]="test.mosquitto.org";
-const char mqtt_topic[]="group2.27/command";
-const char mqtt_client_id[]="arduino_group_2.27"; // must change this string to a unique value
+const char mqtt_topic[]="group2.11/command";
+const char mqtt_client_id[]="arduino_group_2.11"; // must change this string to a unique value
 int MQTT_PORT=1883;
 
 int counter=0;
